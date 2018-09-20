@@ -1,5 +1,6 @@
 Query
 
+Users
 {
   user(id:"23") {
     id,
@@ -9,7 +10,6 @@ Query
 }
 
 Asscociating Users and Companies
-
 {
   user(id:"40") {
     id,
@@ -20,5 +20,14 @@ Asscociating Users and Companies
       name
       description
     }
+  }
+}
+
+Company 
+{
+  company(id: "1") {
+    id
+    name
+    description
   }
 }

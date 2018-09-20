@@ -10,11 +10,7 @@ const {
   GraphQLNonNull
 } = graphql;
 
-const users = [
-  { id: '23', firstName: 'Bill', age: 20 },
-  { id: '24', firstName: 'John', age: 25 },
-  { id: '25', firstName: 'Sam', age: 30 },
-]
+
 
 const UserType = new GraphQLObjectType({
   name: 'User',

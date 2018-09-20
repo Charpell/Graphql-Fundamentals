@@ -43,3 +43,95 @@ Associate Companies and Users
     }
   }
 }
+
+Deep Nested Query
+{
+  company(id: "2") {
+    id
+    name
+    description
+    users {
+      id
+      firstName
+      age
+      company {
+        name
+        users {
+          firstName
+          id 
+          company {
+            name
+          }
+        }
+      }
+    }
+  }
+}
+
+
+You can use the Query keyword
+query {
+  company(id: "2") {
+    id
+    name
+    description
+    users {
+      firstName
+    }
+  }
+}
+
+
+Give the Query a name
+query findCompany{
+  company(id: "2") {
+    id
+    name
+    description
+    users {
+      firstName
+    }
+  }
+}
+
+
+Making more than One query
+{
+  google: company(id: "2") {
+    id
+    name
+    description
+    users {
+      firstName
+    }
+  }
+  
+  apple: company(id: "2") {
+    id
+    name
+    description
+    users {
+      firstName
+    }
+  }
+}
+
+
+Using Fragments
+
+fragment companyDetails on Company {
+  id
+  name
+  description
+}
+
+{
+  google: company(id: "2") {
+    ...companyDetails
+  }
+  
+  apple: company(id: "2") {
+    ...companyDetails
+  }
+}
+

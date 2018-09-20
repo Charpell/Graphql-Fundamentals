@@ -154,3 +154,12 @@ mutation {
     id
   }
 }
+
+editUser
+mutation {
+  editUser(id: "40", age: 40) {
+    id
+    age
+    firstName
+  }
+}

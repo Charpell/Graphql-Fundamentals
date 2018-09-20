@@ -31,3 +31,15 @@ Company
     description
   }
 }
+
+Associate Companies and Users
+{
+  company(id: "2") {
+    id
+    name
+    description
+    users {
+      firstName
+    }
+  }
+}

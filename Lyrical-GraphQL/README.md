@@ -11,3 +11,5 @@ Starter project from a GraphQL course on Udemy.com
 - Add lyric to a Song
 - Like a lyric
 - Delete a Song
+
+### End of lyrical Project
